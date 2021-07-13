@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+
+
 body {font-family: 'Poppins', sans-serif;
     background: #F3F1FF;}
 main {display: flex;
@@ -63,12 +69,78 @@ blog starts here
 latest course sec 
 ------------------*/
 
-.parent-course {display: flex;
+.parent-course {display: grid;
     width: 870px;
-height: 362px;
+
+grid-template-columns: repeat(3, 1fr);
+grid-column-gap: 24px;
 }
+
+/* .top-course {Width :
+    252.42px;
+    Height : 
+    269.79px;
+    border : 1px solid grey;
+    box-shadow :(0px 5.34229px 13.3557px rgba(0, 0, 0, 0.05));
+    display: flex;
+    flex-direction: column;
+} */
 
 .course-photo img {width: 224.38px;
     height: 105.51px;}
 
-.top-course {margin-left: 23.31px;}
+.course-info {display: flex;
+                align-items: center;
+            justify-content: space-between;}
+
+.fa-star.filled {color: #FFC014;}
+
+.fa-star.empty {color: #AEAEAE;}
+
+.course-title h4 {font-size: 20.0336px;
+    line-height: 23px;
+    font-family: 'Roboto', sans-serif;}
+
+.course-time {Width :
+    94.83px;
+    height: 29.5px;
+    background-color: #FEE5DF;
+    border-radius: 14.6913px;
+    color: #FF4A60;
+    font-family: 'Open Sans', sans-serif;
+font-weight: 600;
+padding-top: 0;
+}
+.top-course {width: 262px;}
+
+/*------------------
+    media query
+---------------- */
+
+@media only screen and (max-width:688px) { 
+    .container {width: 100%;
+        justify-content: center;} 
+.top-players, .top-blogs, .parent-course {grid-template-columns: repeat(1, 1fr);
+    justify-content: center;
+}
+.player, .blogs,  {flex-direction: column;
+                    align-items :center}
+
+.course-info {justify-content: flex-end;}
+
+
+
+}
+@media only screen and (min-width :688px) and (max-width : 992px)
+
+
+{.container {width: 100%;}
+    
+    .top-players, .top-blogs {grid-template-columns: repeat(2, 1fr);
+    justify-content: center;}
+    .parent-course {grid-template-columns: repeat(1, 1fr);
+        justify-content: center;}  
+}
+
+
+
